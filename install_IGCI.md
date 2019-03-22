@@ -51,7 +51,3 @@ En plus des recommandations :
 `cd spring-petclinic`
 
 `./mvnw install`
-
-### Rancher
-
-`docker pull rancher/server`
