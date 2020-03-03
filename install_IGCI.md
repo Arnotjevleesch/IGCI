@@ -61,3 +61,25 @@ En plus des recommandations :
 `sudo chmod +x /usr/local/bin/docker-compose`
 
 `docker-compose -v`
+
+### Kubernetes
+
+#### VirtualBox
+
+https://www.virtualbox.org/wiki/Linux_Downloads
+
+#### kubectl
+
+https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/#installer-kubectl-sur-linux
+
+#### minikube
+
+https://kubernetes.io/fr/docs/tasks/tools/install-minikube/
+
+`curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube`
+
+`sudo cp minikube /usr/local/bin && rm minikube`
+
+`minikube start`
+
+`kubectl get nodes`
