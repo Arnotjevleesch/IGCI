@@ -82,4 +82,10 @@ https://kubernetes.io/fr/docs/tasks/tools/install-minikube/
 
 `minikube start`
 
+to check installation :
+
 `kubectl get nodes`
+
+`minikube dashboard`
+
+`minikube stop`
