@@ -54,3 +54,13 @@ If you want to deploy the slideshow to surge, run
 ```sh
 yarn deploy
 ```
+
+
+# Codeslide
+
+## hack
+\node_modules\spectacle-code-slide\lib\CodeSlide.js:61
+
+padding: '40% 0',
+to
+padding: '20% 0',
