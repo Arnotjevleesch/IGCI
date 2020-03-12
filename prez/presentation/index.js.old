@@ -1,0 +1,597 @@
+// Import React
+import React from "react";
+
+import CodeSlide from 'spectacle-code-slide';
+
+// Import Spectacle Core tags
+import {
+  BlockQuote,
+  Cite,
+  Deck,
+  Fill,
+  Fit,
+  Heading,
+  Image,
+  Link,
+  ListItem,
+  List,
+  Quote,
+  Slide,
+  Text,
+  Layout
+} from "spectacle";
+
+// Import theme
+import createTheme from "spectacle/lib/themes/default";
+
+// Require CSS
+require("normalize.css");
+
+const theme = createTheme({
+  primary: "#445566",
+  secondary: "#1F2022",
+  tertiary: "#03A9FC",
+  quaternary: "white"
+}, {
+  primary: "Montserrat",
+  secondary: "Helvetica"
+});
+
+export default class Presentation extends React.Component {
+  render() {
+    return (
+      <Deck
+        theme={theme}
+        contentWidth="1500px"
+      >
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/corto_maltese-01.png")}
+          bgSize="25%"
+          bgRepeat="no-repeat"
+          bgColor="quaternary"
+        />
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/Sogeti_Logo.jpg")}
+          bgSize="40%"
+          bgRepeat="no-repeat"
+          bgColor="quaternary"
+        />
+
+        <Slide transition={["zoom"]} align="center flex-start" bgColor="quaternary">
+          <Heading size={6} textColor="tertiary" caps padding="50">Sogeti, filiale du groupe Capgemini</Heading>
+          <Image src={require("../assets/sogeti_monde.png")} width="80%"/>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start" bgColor="quaternary">
+          <Heading size={6} textColor="tertiary" caps padding="50">Sogeti en France</Heading>
+          <Image src={require("../assets/sogeti_france.png")} width="80%"/>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start" bgColor="quaternary">
+          <Heading size={6} textColor="tertiary" caps padding="50">Initiatives</Heading>
+
+          <Layout>
+            <Image src={require("../assets/sogeti4theplanet.jpg")}/>
+            <Image src={require("../assets/sogeti_esport.jpg")}/>
+            <Image src={require("../assets/defi-h-2017.1.jpg")}/>
+          </Layout>
+          
+          <List textColor="tertiary" bold>
+            <ListItem textSize={40}>Combattre la pollution de l’eau partout en France</ListItem>
+            <ListItem textSize={40}>Affirmer notre dimension technologique et d’innovation</ListItem>
+            <ListItem textSize={40}>Innover pour l’insertion des personnes en situation de handicap</ListItem>
+          </List>
+          
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start" bgColor="quaternary">
+          <Heading size={6} textColor="tertiary" caps padding="50">Sogeti Lille</Heading>
+          <Text padding="50" textColor="tertiary" bold>ATS (Application Testing Sécurité) : 100 consultants</Text>
+          <Image src={require("../assets/sogeti_lille.png")} width="80%"/>
+        </Slide>
+
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Sogeti Lille</Heading>
+          <List textColor="tertiary" bold>
+            <ListItem textSize={40}>Afterwork</ListItem>
+            <ListItem textSize={40}>Soirées d'agence</ListItem>
+            <ListItem textSize={40}>Career Manager</ListItem>
+            <ListItem textSize={40}>Communautés (Agile, Technique, Test, Career Manager, Féminine)</ListItem>
+          </List>
+        </Slide>
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/sogeti_stages.png")}
+          bgSize="80%"
+          bgRepeat="no-repeat"
+          bgColor="quaternary"
+        />
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/kungfu.jpg")}
+          bgSize="50%"
+          bgRepeat="no-repeat"
+          bgColor="primary"
+        />
+
+        <Slide 
+          transition={["zoom"]} 
+          align="flex-start center"
+        >
+          <List textColor="tertiary" bold>
+            <ListItem textSize={60}>Théorie</ListItem>
+            <ListItem textSize={60}>L'écosystème</ListItem>
+            <ListItem textSize={60}>Pratique en TP autour de Jenkins</ListItem>
+          </List>
+        </Slide>
+
+        <Slide 
+          transition={["zoom"]} 
+          align="center flex-start"
+        >
+          <Heading size={6} textColor="quaternary" caps padding="50">Définition</Heading>
+          
+          <BlockQuote>
+            <Quote textColor="tertiary" textSize={55} padding="150">
+            Envoyer ses bugs automatiquement et plus vite en prod
+            </Quote>
+            <Cite>un troll</Cite>
+          </BlockQuote>
+
+        </Slide>
+
+        <Slide 
+          transition={["zoom"]}
+          align="center flex-start"
+        >
+          <Heading size={6} textColor="quaternary" caps padding="50">Définition</Heading>
+
+          <BlockQuote>
+            <Quote textColor="tertiary" textSize={50} padding="100" textAlign="justify">
+            C'est le truc magique où tu appuies sur un bouton et ton app est en prod.
+            Y’en a qui poussent en staging tout seul.
+            J’ai même connu des équipes qui poussaient en production à chaque push validé par les tests.
+            </Quote>
+            <Cite>artisandeveloppeur.fr</Cite>
+          </BlockQuote>
+
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Historique</Heading>
+          <Text padding="150" textColor="tertiary" bold>1993 : L'expression "intégration continue" est employée pour recommander une intégration assez fréquente mais "programmée" dans le cadre d'un processus incrémental </Text>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Historique</Heading>
+          <Text padding="150" textColor="tertiary" bold>1996 : Technique du "Daily Build and Smoke Test" par Microsoft pour Windows NT 3.0</Text>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Historique</Heading>
+          <Text padding="50" textColor="tertiary" bold>2000 : Description des principes pour l'intégration continue (Martin Fowler)</Text>
+          <List textColor="tertiary" bold>
+            <ListItem textSize={38}>utilisation d'un référentiel de gestion de versions du code source</ListItem>
+            <ListItem textSize={38}>automatisation du processus de "build"</ListItem>
+            <ListItem textSize={38}>présence de tests unitaires et fonctionnels automatisés (en lieu et place d'un "smoke test" manuel)</ListItem>
+            <ListItem textSize={38}>exécution au minimum quotidienne de l'ensemble (build+test)</ListItem>
+            <ListItem textSize={38}>gestion manuelle du processus d'intégration</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Historique</Heading>
+          <Text padding="150" textColor="tertiary" bold>2001 : Cruise Control</Text>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Historique</Heading>
+          <Text padding="150" textColor="tertiary" bold>2007 : Déploiement continu</Text>
+          <List textColor="tertiary">
+            <ListItem textSize={20}>http://referentiel.institut-agile.fr/ci.html</ListItem>
+            <ListItem textSize={20}>https://www.martinfowler.com/articles/originalContinuousIntegration.html</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Vocabulaire</Heading>
+          <Text padding="150" textColor="tertiary" bold>Différence Intégration continue / Déploiement continu</Text>
+        </Slide>
+
+	      <Slide transition={["zoom"]} bgColor="quaternary" align="center flex-start">
+          <Heading size={6} textColor="primary" caps padding="50">Vocabulaire</Heading>
+          <Image padding="50" src={require("../assets/ICDC.png")} width="100%"/>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Principes agiles</Heading>
+          <List padding="100" textColor="tertiary" bold>
+            <ListItem>Augmenter la fréquence de déploiement</ListItem>
+            <ListItem>Fail fast, meilleure réactivité</ListItem>
+            <ListItem>Pas de coupure de service</ListItem>
+            <ListItem>Sprint 0</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Versioning (s'y retrouver)</Heading>
+          <List textColor="tertiary" bold padding="150">
+             <ListItem>Patterns</ListItem>
+             <ListItem>Tags</ListItem>
+             <ListItem>Snapshot vs release</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps  padding="50">Ce qu'on peut automatiser</Heading>
+          <List textColor="tertiary" bold>
+            <ListItem textSize={32}>Compilation</ListItem>
+            <ListItem textSize={32}>Tests unitaires</ListItem>
+            <ListItem textSize={32}>Inspection du code (métrique de qualité)</ListItem>
+            <ListItem textSize={32}>Construction des livrables</ListItem>
+            <ListItem textSize={32}>Mise à disposition des livrables</ListItem>
+            <ListItem textSize={32}>Déploiement sur environnement de test</ListItem>
+            <ListItem textSize={32}>Tests d'intégration</ListItem>
+            <ListItem textSize={32}>Tests UI sur différents navigateurs</ListItem>
+            <ListItem textSize={32}>Test de charge</ListItem>
+
+            <ListItem textSize={32}>Déploiement</ListItem>
+
+            <ListItem textSize={32}>Publication de rapport</ListItem>
+            <ListItem textSize={32}>Notification des résultats</ListItem>
+            <ListItem textSize={32}>Génération de doc</ListItem>
+            <ListItem textSize={32}>Release note</ListItem>
+            <ListItem textSize={32}>...</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="quaternary" align="center flex-start">
+          <Heading size={6} textColor="primary" caps padding="50">Ce qu'on peut automatiser</Heading>
+          <Image src={require("../assets/pipeline_workflow.jpg")} width="60%"/>
+        </Slide>
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/blue-ocean-jenkins_pipeline_ok.png")}
+          bgRepeat="no-repeat"
+          bgSize="90%"
+          bgColor="#3A86CE"
+        >
+        </Slide>
+
+        <Slide
+          transition={["fade"]}
+          bgImage={require("../assets/blue-ocean-jenkins_pipeline_ko.png")}
+          bgRepeat="no-repeat"
+          bgSize="70%"
+          bgColor="#479AD7"
+        >
+        </Slide>
+
+        <Slide
+          transition={["zoom"]}
+        >
+          <Heading size={6} textColor="quaternary" caps>L'écosystème</Heading>
+        </Slide>
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/ecosystem.jpg")}
+          bgRepeat="no-repeat"
+          bgSize="70%"
+          bgColor="quaternary"
+        >
+        </Slide>
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/gitflow_1.png")}
+          bgRepeat="no-repeat"
+          bgSize="60%"
+          bgColor="quaternary"
+        >
+        </Slide>
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/docker-ecosystem.png")}
+          bgRepeat="no-repeat"
+          bgSize="90%"
+          bgColor="quaternary"
+        >
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Avec Docker tu peux tout faire</Heading>
+          <Image src={require("../assets/dockers.png")} width="60%"/>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Avec Docker tu peux tout faire</Heading>
+          <List textColor="tertiary" bold padding="150">
+             <ListItem>Portabilité</ListItem>
+             <ListItem>Modularité</ListItem>
+             <ListItem>Securité</ListItem>
+             <ListItem>Scalabilité</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Avec Docker tu peux tout faire</Heading>
+          <Image src={require("../assets/docker-1.png")} width="100%"/>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="quaternary" align="center flex-start">
+          <Heading size={6} textColor="primary" caps padding="50">La pratique avec Jenkins</Heading>
+          <Image src={require("../assets/jenkins.jpg")} width="40%"/>
+          <Link href="http://localhost:7777">http://localhost:7777</Link>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">La pratique avec Jenkins</Heading>
+          <Text textColor="tertiary" bold padding="150">Avant / après jenkinsfile</Text>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">La pratique avec Jenkins</Heading>
+          <Text textColor="tertiary" bold padding="150">Ecriture du Jenkinsfile (Declarative > Scripted)</Text>
+        </Slide>
+
+        <CodeSlide
+          lang="js"
+          textSize=".5em"
+          bold
+          code={require("raw-loader!../assets/Jenkinsfile_base")}
+          bgColor="tertiary"
+          align="flex-start flex-start"
+          ranges={[
+            { loc: [0, 25], title: "Jenkinsfile, simple, basique" },
+            { loc: [0, 1], title: "Groovy baby" },
+            { loc: [2, 3], title: "Agent" },
+            { loc: [3, 5], title: "Options" },
+            { loc: [5, 7], title: "Tools" },
+            { loc: [7, 19], title: "Les étapes" },
+            { loc: [19, 24], title: "Post traitement"},
+          ]}
+        />
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Communiquer avec l'extérieur</Heading>
+          <List textColor="tertiary" bold padding="100">
+             <ListItem>Port mapping</ListItem>
+             <ListItem>Variables d'environnement</ListItem>
+             <ListItem>Volumes</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Port mapping</Heading>
+          <Image src={require("../assets/docker_port_mapping.jpg")} width="80%" padding="50"/>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Variables d'environnement</Heading>
+          <Image src={require("../assets/docker_envvar.jpg")} width="80%" padding="50"/>
+        </Slide>
+
+        <Slide transition={["zoom"]} align="center flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Volumes</Heading>
+          <Text textColor="quaternary" bold>Quand un container est supprimé, les données sont supprimées.</Text>
+          <Image src={require("../assets/volumes.png")} width="80%" padding="50"/>
+        </Slide>
+
+        <Slide align="flex-start flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Volumes</Heading>
+          <List textColor="tertiary" bold padding="50">
+             <ListItem textSize={32}>docker volume create my-vol</ListItem>
+          </List>
+        </Slide>
+
+        <Slide align="flex-start flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Volumes</Heading>
+          <List textColor="tertiary" bold padding="50">
+             <ListItem textSize={32}>docker volume create my-vol</ListItem>
+             <ListItem textSize={32}>docker volume ls</ListItem>
+          </List>
+        </Slide>
+
+        <Slide align="flex-start flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Volumes</Heading>
+          <List textColor="tertiary" bold padding="50">
+             <ListItem textSize={32}>docker volume create my-vol</ListItem>
+             <ListItem textSize={32}>docker volume ls</ListItem>
+             <ListItem textSize={32}>docker volume inspect my-vol</ListItem>
+          </List>
+        </Slide>
+
+        <Slide align="flex-start flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Volumes</Heading>
+          <List textColor="tertiary" bold padding="50">
+             <ListItem textSize={32}>docker volume create my-vol</ListItem>
+             <ListItem textSize={32}>docker volume ls</ListItem>
+             <ListItem textSize={32}>docker volume inspect my-vol</ListItem>
+             <ListItem textSize={32}>docker run -d --name devtest -v my-vol:/app nginx:latest</ListItem>
+          </List>
+        </Slide>
+
+        <Slide align="flex-start flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Volumes</Heading>
+          <List textColor="tertiary" bold padding="50">
+             <ListItem textSize={32}>docker volume create my-vol</ListItem>
+             <ListItem textSize={32}>docker volume ls</ListItem>
+             <ListItem textSize={32}>docker volume inspect my-vol</ListItem>
+             <ListItem textSize={32}>docker run -d --name devtest -v my-vol:/app nginx:latest</ListItem>
+             <ListItem textSize={32}>docker exec devtest touch /app/toto</ListItem>
+          </List>
+        </Slide>
+
+        <Slide align="flex-start flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Docker - Volumes</Heading>
+          <List textColor="tertiary" bold padding="50">
+             <ListItem textSize={32}>docker volume create my-vol</ListItem>
+             <ListItem textSize={32}>docker volume ls</ListItem>
+             <ListItem textSize={32}>docker volume inspect my-vol</ListItem>
+             <ListItem textSize={32}>docker run -d --name devtest -v my-vol:/app nginx:latest</ListItem>
+             <ListItem textSize={32}>docker exec devtest touch /app/toto</ListItem>
+             <ListItem textSize={32}>ls dans le point de montage (cf inspect)</ListItem>
+          </List>
+        </Slide>
+
+        <Slide 
+          transition={["zoom"]} 
+          align="center flex-start"
+        >
+          <Heading size={6} textColor="quaternary" caps padding="50">DEVOPS - Définition</Heading>
+          
+          <BlockQuote>
+            <Quote textColor="tertiary" textSize={40} padding="50">
+            Un ensemble de pratiques qui visent à réduire le Time to Market et à améliorer la qualité 
+            des produits logiciels, en réinventant la coopération entre DEV et OPS.<br></br><br></br> 
+            DevOps, c’est un modèle d’organisation, une culture, un assemblage de processus, 
+            d’outils et de patterns d’architecture.
+            </Quote>
+            <Cite>octo.com</Cite>
+          </BlockQuote>
+
+        </Slide>
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/devops-culture.png")}
+          bgRepeat="no-repeat"
+          bgSize="50%"
+          bgColor="quaternary"
+        >
+        </Slide>
+
+        <Slide
+          transition={["zoom"]}
+          bgImage={require("../assets/devops-process.png")}
+          bgRepeat="no-repeat"
+          bgSize="80%"
+          bgColor="quaternary"
+        >
+        </Slide>
+
+        <Slide align="flex-start flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">DEVOPS - Marketing</Heading>
+          <List textColor="tertiary" bold padding="50">
+             <ListItem textSize={32}>*AsCode</ListItem>
+             <ListItem textSize={32}>infrastructureAsCode (Ansible, Terraform, ...)</ListItem>
+             <ListItem textSize={32}>pipelineAsCode (Jenkins, ...)</ListItem>
+          </List>
+        </Slide>
+
+        <Slide 
+          transition={["zoom"]} 
+          align="center flex-start"
+        >
+          <Heading size={6} textColor="quaternary" caps padding="50">Cloud - Définition</Heading>
+
+          <BlockQuote>
+            <Quote textColor="tertiary" textSize={40} padding="50">
+            Le Cloud (ou cloud computing) est une technologie qui permet de mettre sur des serveurs localisés 
+            à distance des données de stockage ou des logiciels qui sont habituellement stockés 
+            sur l'ordinateur d'un utilisateur, voire sur des serveurs installés en réseau 
+            local au sein d'une entreprise.<br></br><br></br>
+            Cette virtualisation des ressources permet donc à l'entreprise d'accéder à ses données 
+            sans avoir à gérer une infrastructure informatique, souvent complexe 
+            et qui représente une certain coût pour l'entreprise.
+            </Quote>
+            <Cite>http://le-cloud.net/</Cite>
+          </BlockQuote>
+
+          
+        </Slide>
+
+        <Slide align="flex-start flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Cloud - Définition</Heading>
+          <List textColor="tertiary" bold padding="50">
+             <ListItem textSize={32}>Maintenance des serveurs (Gestion de la performance déplacée, cf TP Jenkins)</ListItem>
+             <ListItem textSize={32}>Modèle économique</ListItem>
+          </List>
+        </Slide>
+
+        <Slide align="flex-start flex-start">
+          <Heading size={6} textColor="quaternary" caps padding="50">Cloud - Marketing</Heading>
+          <List textColor="tertiary" bold padding="50">
+             <ListItem textSize={32}>*AsAService</ListItem>
+             <ListItem textSize={32}>Saas (Software As A Service)</ListItem>
+             <ListItem textSize={32}>Paas (Platform As A Service)</ListItem>
+             <ListItem textSize={32}>Faas (Function As A Service)</ListItem>
+             <ListItem textSize={32}>DbAsAService</ListItem>
+             <ListItem textSize={32}>https://en.wikipedia.org/wiki/As_a_service</ListItem>
+          </List>
+        </Slide>
+
+        <Slide 
+          transition={["zoom"]} 
+          align="center flex-start"
+        >
+          <Heading size={6} textColor="quaternary" caps padding="50">Cloud - SCM</Heading>
+          <Image src={require("../assets/scm.jpg")} width="70%" padding="50"/>
+        </Slide>
+
+        <Slide 
+          transition={["zoom"]} 
+          align="center flex-start"
+        >
+          <Heading size={6} textColor="quaternary" caps padding="20">Cloud - Build</Heading>
+          <Layout>
+            <Image src={require("../assets/Top-10-CI-systems-used-with-GitHub.png")} width="60%" height="60%"/>
+            <Image src={require("../assets/gitlab-ci.png")} width="20%" height="20%"/>
+          </Layout>
+        </Slide>
+
+        <Slide 
+          transition={["zoom"]} 
+          align="center flex-start"
+        >
+          <Heading size={6} textColor="quaternary" caps padding="20">Cloud Providers</Heading>
+          <Layout>
+            <Image src={require("../assets/gcp.png")} width="20%" height="20%"/>
+            <Image src={require("../assets/heroku.png")} width="20%" height="20%"/>
+            <Image src={require("../assets/azure.png")} width="20%" height="20%"/>
+          </Layout>
+
+          <Layout>  
+            <Image src={require("../assets/OpenShift.png")} width="20%" height="20%"/>
+            <Image src={require("../assets/aws.png")} width="20%" height="20%"/>
+          </Layout>
+        </Slide>
+
+        <Slide 
+          transition={["zoom"]} 
+          align="center flex-start"
+        >
+          <Heading size={6} textColor="quaternary" caps padding="50">Cloud Providers</Heading>
+          <Image src={require("../assets/Cloud-Region-Q118.png")} width="70%" padding="50"/>
+        </Slide>
+
+        
+        <Slide 
+          transition={["zoom"]} 
+          align="center flex-start"
+        >
+          <Heading size={6} textColor="quaternary" caps padding="50">TP Cloud</Heading>
+          
+          <Link 
+          href="https://github.com/Arnotjevleesch/IGCI/blob/master/tp_cloud_igci.md"
+          textColor="quaternary"
+          bold>
+          https://github.com/Arnotjevleesch/IGCI/blob/master/tp_cloud_igci.md
+          </Link>
+        </Slide>
+
+
+      </Deck>
+    );
+  }
+}

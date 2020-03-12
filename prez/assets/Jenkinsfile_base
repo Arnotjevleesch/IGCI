@@ -1,0 +1,25 @@
+#!/usr/bin/env groovy
+pipeline {
+    agent any
+    options {
+    }
+    tools {
+    }
+    stages {
+        stage('First stage') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Second stage') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+    }
+    // always, unstable, success, failure, changed
+    post {
+        always {
+        }
+    }
+}
