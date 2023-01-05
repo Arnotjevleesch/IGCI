@@ -5135,8 +5135,8 @@ json3@^3.3.2:
   resolved "http://nexus.osiris.withoxylane.com/repository/managedNpm/json3/-/json3-3.3.3.tgz#7fc10e375fc5ae42c4705a5cc0aa6f62be305b81"
 
 json5@^1.0.1:
-  version "1.0.1"
-  resolved "http://nexus.osiris.withoxylane.com/repository/managedNpm/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.2.tgz#63d98d60f21b313b77c4d6da18bfa69d80e1d593"
   dependencies:
     minimist "^1.2.0"
 
@@ -5667,8 +5667,8 @@ minimist@1.1.1:
   resolved "http://nexus.osiris.withoxylane.com/repository/managedNpm/minimist/-/minimist-1.1.1.tgz#1bc2bc71658cdca5712475684363615b0b4f695b"
 
 minimist@^1.1.1, minimist@^1.2.0:
-  version "1.2.4"
-  resolved "http://nexus.osiris.withoxylane.com/repository/managedNpm/minimist/-/minimist-1.2.4.tgz#40357ef9582f8cd42ba8eaa274ddcf27f0c979b7"
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
 
 mississippi@^2.0.0:
   version "2.0.0"
